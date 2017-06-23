@@ -12,6 +12,8 @@
 		D1917FE71EFD124800BC7A08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1917FE51EFD124800BC7A08 /* Main.storyboard */; };
 		D1917FE91EFD124800BC7A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1917FE81EFD124800BC7A08 /* Assets.xcassets */; };
 		D1917FEC1EFD124800BC7A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1917FEA1EFD124800BC7A08 /* LaunchScreen.storyboard */; };
+		D1917FF71EFD127D00BC7A08 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1917FF61EFD127D00BC7A08 /* Person.swift */; };
+		D1917FF91EFD12A300BC7A08 /* GreetinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1917FF81EFD12A300BC7A08 /* GreetinViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D1917FE81EFD124800BC7A08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1917FEB1EFD124800BC7A08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1917FED1EFD124800BC7A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1917FF61EFD127D00BC7A08 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D1917FF81EFD12A300BC7A08 /* GreetinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreetinViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		D1917FE01EFD124800BC7A08 /* MVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D1917FF51EFD126B00BC7A08 /* V */,
+				D1917FF41EFD125C00BC7A08 /* VM */,
+				D1917FF31EFD125300BC7A08 /* M */,
 				D1917FE11EFD124800BC7A08 /* AppDelegate.swift */,
-				D1917FE31EFD124800BC7A08 /* ViewController.swift */,
 				D1917FE51EFD124800BC7A08 /* Main.storyboard */,
 				D1917FE81EFD124800BC7A08 /* Assets.xcassets */,
 				D1917FEA1EFD124800BC7A08 /* LaunchScreen.storyboard */,
 				D1917FED1EFD124800BC7A08 /* Info.plist */,
 			);
 			path = MVVMDemo;
+			sourceTree = "<group>";
+		};
+		D1917FF31EFD125300BC7A08 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				D1917FF61EFD127D00BC7A08 /* Person.swift */,
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		D1917FF41EFD125C00BC7A08 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				D1917FF81EFD12A300BC7A08 /* GreetinViewModel.swift */,
+			);
+			name = VM;
+			sourceTree = "<group>";
+		};
+		D1917FF51EFD126B00BC7A08 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				D1917FE31EFD124800BC7A08 /* ViewController.swift */,
+			);
+			name = V;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +126,6 @@
 				TargetAttributes = {
 					D1917FDD1EFD124800BC7A08 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = A94PQW5A8P;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,8 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1917FF71EFD127D00BC7A08 /* Person.swift in Sources */,
 				D1917FE41EFD124800BC7A08 /* ViewController.swift in Sources */,
 				D1917FE21EFD124800BC7A08 /* AppDelegate.swift in Sources */,
+				D1917FF91EFD12A300BC7A08 /* GreetinViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A94PQW5A8P;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MVVMDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.MVVMDemo;
@@ -274,7 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A94PQW5A8P;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MVVMDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.MVVMDemo;

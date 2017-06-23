@@ -10,16 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lbTitle: UILabel!
+    
+    var person:Person? = nil
+    
+    var viewModel:GreetingViewModelProtocol! {
+        didSet {
+            // 负责VM更新V
+            self.viewModel.greetingDidChange = { vm in
+                self.lbTitle.text = vm.greeting
+            }
+        }
+    }
+    
+    @IBAction func onClick(_ sender: Any) {
+        // V更新VM
+        self.viewModel.showGreeting()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        person = Person(firstName: "Gao", lastName: "L")
+        self.viewModel = GreetingViewModel(person: person!)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
